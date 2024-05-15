@@ -79,7 +79,7 @@
     <link rel="prev" title="xESMF Demo using SEVIER dataset for Machine Learning Preperation" href="xESMF_introduction.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
-    <meta name="docbuild:last-update" content="14 May 2024"/>
+    <meta name="docbuild:last-update" content="15 May 2024"/>
   </head>
   
   
@@ -440,12 +440,12 @@
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>matplotlib: 3.8.4
-numpy     : 1.26.4
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>pandas    : 2.2.2
+matplotlib: 3.8.4
 sys       : 3.10.14 | packaged by conda-forge | (main, Mar 20 2024, 12:45:18) [GCC 12.3.0]
-cartopy   : 0.23.0
 verde     : 1.8.0
-pandas    : 2.2.2
+numpy     : 1.26.4
+cartopy   : 0.23.0
 </pre></div>
 </div>
 </div>
@@ -746,7 +746,7 @@ Name: count, dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BlockReduce(reduction=&lt;function median at 0x7f04088fd1f0&gt;, spacing=0.5)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>BlockReduce(reduction=&lt;function median at 0x7fd6002dccb0&gt;, spacing=0.5)
 </pre></div>
 </div>
 </div>
@@ -761,11 +761,11 @@ Name: count, dtype: int64
 <div class="cell_output docutils container">
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/runner/miniconda3/envs/gridding-cookbook-dev/lib/python3.10/site-packages/verde/blockreduce.py:177: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
   columns = {&quot;data{}&quot;.format(i): comp.ravel() for i, comp in enumerate(data)}
-/home/runner/miniconda3/envs/gridding-cookbook-dev/lib/python3.10/site-packages/verde/blockreduce.py:179: FutureWarning: The provided callable &lt;function median at 0x7f04088fac20&gt; is currently using DataFrameGroupBy.median. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string &quot;median&quot; instead.
+/home/runner/miniconda3/envs/gridding-cookbook-dev/lib/python3.10/site-packages/verde/blockreduce.py:179: FutureWarning: The provided callable &lt;function median at 0x7fd6002d6c20&gt; is currently using DataFrameGroupBy.median. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string &quot;median&quot; instead.
   blocked = pd.DataFrame(columns).groupby(&quot;block&quot;).aggregate(reduction)
 /home/runner/miniconda3/envs/gridding-cookbook-dev/lib/python3.10/site-packages/verde/blockreduce.py:231: FutureWarning: Series.ravel is deprecated. The underlying array is already 1D, so ravel is not necessary.  Use `to_numpy()` for conversion to a numpy array instead.
   &quot;coordinate{}&quot;.format(i): coord.ravel()
-/home/runner/miniconda3/envs/gridding-cookbook-dev/lib/python3.10/site-packages/verde/blockreduce.py:236: FutureWarning: The provided callable &lt;function median at 0x7f04088fac20&gt; is currently using DataFrameGroupBy.median. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string &quot;median&quot; instead.
+/home/runner/miniconda3/envs/gridding-cookbook-dev/lib/python3.10/site-packages/verde/blockreduce.py:236: FutureWarning: The provided callable &lt;function median at 0x7fd6002d6c20&gt; is currently using DataFrameGroupBy.median. In a future version of pandas, the provided callable will be used directly. To keep current behavior pass the string &quot;median&quot; instead.
   grouped = table.groupby(&quot;block&quot;).aggregate(self.reduction)
 </pre></div>
 </div>
@@ -1240,12 +1240,12 @@ Coordinates:
   * easting   (easting) float64 144B -110.5 -110.0 -109.5 ... -102.4 -101.9
   * northing  (northing) float64 112B 35.14 35.66 36.18 ... 40.84 41.36 41.88
 Data variables:
-    PM25      (northing, easting) float64 2kB nan nan nan nan ... 17.54 nan nan</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-08cdc3d5-8756-4415-b579-4c781681f69b' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-08cdc3d5-8756-4415-b579-4c781681f69b' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>easting</span>: 18</li><li><span class='xr-has-index'>northing</span>: 14</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-e866c72d-e9e8-449a-8b96-65b3f6bec881' class='xr-section-summary-in' type='checkbox'  checked><label for='section-e866c72d-e9e8-449a-8b96-65b3f6bec881' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>easting</span></div><div class='xr-var-dims'>(easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-110.5 -110.0 ... -102.4 -101.9</div><input id='attrs-58224f70-46e3-4156-a6dc-d85c26787838' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-58224f70-46e3-4156-a6dc-d85c26787838' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e45cb6b7-a287-4b02-8023-259fdff32348' class='xr-var-data-in' type='checkbox'><label for='data-e45cb6b7-a287-4b02-8023-259fdff32348' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-110.537888, -110.030265, -109.522642, -109.01502 , -108.507397,
+    PM25      (northing, easting) float64 2kB nan nan nan nan ... 17.54 nan nan</pre><div class='xr-wrap' style='display:none'><div class='xr-header'><div class='xr-obj-type'>xarray.Dataset</div></div><ul class='xr-sections'><li class='xr-section-item'><input id='section-9fd386dc-bf77-4ce0-bca1-c6fa29a35c7f' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-9fd386dc-bf77-4ce0-bca1-c6fa29a35c7f' class='xr-section-summary'  title='Expand/collapse section'>Dimensions:</label><div class='xr-section-inline-details'><ul class='xr-dim-list'><li><span class='xr-has-index'>easting</span>: 18</li><li><span class='xr-has-index'>northing</span>: 14</li></ul></div><div class='xr-section-details'></div></li><li class='xr-section-item'><input id='section-fb743cb8-46f7-4a54-b2a7-cb03bf9a1b35' class='xr-section-summary-in' type='checkbox'  checked><label for='section-fb743cb8-46f7-4a54-b2a7-cb03bf9a1b35' class='xr-section-summary' >Coordinates: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>easting</span></div><div class='xr-var-dims'>(easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>-110.5 -110.0 ... -102.4 -101.9</div><input id='attrs-2607bfef-3e00-4db2-9c39-6eca9fd3a4e4' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-2607bfef-3e00-4db2-9c39-6eca9fd3a4e4' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-e6587205-f892-4a90-b523-f6e9c90191f1' class='xr-var-data-in' type='checkbox'><label for='data-e6587205-f892-4a90-b523-f6e9c90191f1' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([-110.537888, -110.030265, -109.522642, -109.01502 , -108.507397,
        -107.999774, -107.492151, -106.984528, -106.476905, -105.969283,
        -105.46166 , -104.954037, -104.446414, -103.938791, -103.431168,
-       -102.923546, -102.415923, -101.9083  ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>northing</span></div><div class='xr-var-dims'>(northing)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>35.14 35.66 36.18 ... 41.36 41.88</div><input id='attrs-ea9a0e56-dc3a-4be9-9d63-10c75bcfca8e' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-ea9a0e56-dc3a-4be9-9d63-10c75bcfca8e' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-4947cfb6-7e57-4732-be80-f296fa19dc7c' class='xr-var-data-in' type='checkbox'><label for='data-4947cfb6-7e57-4732-be80-f296fa19dc7c' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([35.1441  , 35.661904, 36.179709, 36.697513, 37.215317, 37.733122,
+       -102.923546, -102.415923, -101.9083  ])</pre></div></li><li class='xr-var-item'><div class='xr-var-name'><span class='xr-has-index'>northing</span></div><div class='xr-var-dims'>(northing)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>35.14 35.66 36.18 ... 41.36 41.88</div><input id='attrs-d4e24a00-be7d-496c-ae90-d5cb2c833cc6' class='xr-var-attrs-in' type='checkbox' disabled><label for='attrs-d4e24a00-be7d-496c-ae90-d5cb2c833cc6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-50241b4f-a868-403b-a5d2-4afc8e4bbd7f' class='xr-var-data-in' type='checkbox'><label for='data-50241b4f-a868-403b-a5d2-4afc8e4bbd7f' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'></dl></div><div class='xr-var-data'><pre>array([35.1441  , 35.661904, 36.179709, 36.697513, 37.215317, 37.733122,
        38.250926, 38.76873 , 39.286534, 39.804339, 40.322143, 40.839947,
-       41.357752, 41.875556])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-8e7965ec-bdd1-421b-9b23-1723a3229392' class='xr-section-summary-in' type='checkbox'  checked><label for='section-8e7965ec-bdd1-421b-9b23-1723a3229392' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>PM25</span></div><div class='xr-var-dims'>(northing, easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>nan nan nan nan ... 17.54 nan nan</div><input id='attrs-b2b4ed49-f3de-4585-9b9d-ba81b64679a7' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-b2b4ed49-f3de-4585-9b9d-ba81b64679a7' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-dfbd2ce5-6d26-4962-9f4b-d0e9285faf63' class='xr-var-data-in' type='checkbox'><label for='data-dfbd2ce5-6d26-4962-9f4b-d0e9285faf63' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>metadata :</span></dt><dd>Generated by Spline(mindist=0)</dd></dl></div><div class='xr-var-data'><pre>array([[        nan,         nan,         nan,         nan,         nan,
+       41.357752, 41.875556])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-a7649738-82e5-40fe-a6bd-4cd85f23eae2' class='xr-section-summary-in' type='checkbox'  checked><label for='section-a7649738-82e5-40fe-a6bd-4cd85f23eae2' class='xr-section-summary' >Data variables: <span>(1)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-var-name'><span>PM25</span></div><div class='xr-var-dims'>(northing, easting)</div><div class='xr-var-dtype'>float64</div><div class='xr-var-preview xr-preview'>nan nan nan nan ... 17.54 nan nan</div><input id='attrs-01a0e1d8-7bd9-4f1f-8cf5-d8218bce00f6' class='xr-var-attrs-in' type='checkbox' ><label for='attrs-01a0e1d8-7bd9-4f1f-8cf5-d8218bce00f6' title='Show/Hide attributes'><svg class='icon xr-icon-file-text2'><use xlink:href='#icon-file-text2'></use></svg></label><input id='data-be49774e-84ac-4616-9fb6-ee63ffe468a6' class='xr-var-data-in' type='checkbox'><label for='data-be49774e-84ac-4616-9fb6-ee63ffe468a6' title='Show/Hide data repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-var-attrs'><dl class='xr-attrs'><dt><span>metadata :</span></dt><dd>Generated by Spline(mindist=0)</dd></dl></div><div class='xr-var-data'><pre>array([[        nan,         nan,         nan,         nan,         nan,
                 nan, 44.59131046, 39.577399  , 30.9290346 , 19.37611031,
         15.19816161,         nan,         nan,         nan,         nan,
                 nan, 25.41683029, 26.43790005],
@@ -1285,18 +1285,18 @@ Data variables:
        [15.08874012, 11.13853538,  8.65034358,  9.72304681, 14.06563031,
                 nan,         nan,         nan,         nan, 33.19423011,
         36.73937806, 39.70671614, 37.41064739, 30.95188451, 23.921356  ,
-        17.53679109,         nan,         nan]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-4ad96841-8127-4128-9303-a06dc76b4c88' class='xr-section-summary-in' type='checkbox'  ><label for='section-4ad96841-8127-4128-9303-a06dc76b4c88' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>easting</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-7cebc2b8-7566-41e7-8de8-83a16cc2e034' class='xr-index-data-in' type='checkbox'/><label for='index-7cebc2b8-7566-41e7-8de8-83a16cc2e034' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([        -110.537888, -110.03026517647058, -109.52264235294118,
+        17.53679109,         nan,         nan]])</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-43ea3aad-c62f-45da-b8f2-47f9ef7ca5a6' class='xr-section-summary-in' type='checkbox'  ><label for='section-43ea3aad-c62f-45da-b8f2-47f9ef7ca5a6' class='xr-section-summary' >Indexes: <span>(2)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><ul class='xr-var-list'><li class='xr-var-item'><div class='xr-index-name'><div>easting</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-fa50f54e-3583-497e-abec-a24879544eba' class='xr-index-data-in' type='checkbox'/><label for='index-fa50f54e-3583-497e-abec-a24879544eba' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([        -110.537888, -110.03026517647058, -109.52264235294118,
        -109.01501952941176, -108.50739670588234, -107.99977388235294,
        -107.49215105882352,  -106.9845282352941,  -106.4769054117647,
        -105.96928258823529, -105.46165976470587, -104.95403694117647,
        -104.44641411764705, -103.93879129411765, -103.43116847058823,
        -102.92354564705882, -102.41592282352941,           -101.9083],
-      dtype=&#x27;float64&#x27;, name=&#x27;easting&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>northing</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-709f2c74-e3ec-4627-bfd7-073bfc76c1f5' class='xr-index-data-in' type='checkbox'/><label for='index-709f2c74-e3ec-4627-bfd7-073bfc76c1f5' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([           35.1441,  35.66190430769231,  36.17970861538462,
+      dtype=&#x27;float64&#x27;, name=&#x27;easting&#x27;))</pre></div></li><li class='xr-var-item'><div class='xr-index-name'><div>northing</div></div><div class='xr-index-preview'>PandasIndex</div><div></div><input id='index-945ab4a5-4414-4aa9-a50e-9d1c00eefef4' class='xr-index-data-in' type='checkbox'/><label for='index-945ab4a5-4414-4aa9-a50e-9d1c00eefef4' title='Show/Hide index repr'><svg class='icon xr-icon-database'><use xlink:href='#icon-database'></use></svg></label><div class='xr-index-data'><pre>PandasIndex(Index([           35.1441,  35.66190430769231,  36.17970861538462,
         36.69751292307693,  37.21531723076923,  37.73312153846154,
         38.25092584615385,  38.76873015384616, 39.286534461538466,
        39.804338769230775,  40.32214307692308, 40.839947384615385,
        41.357751692307694,          41.875556],
-      dtype=&#x27;float64&#x27;, name=&#x27;northing&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-285d5b70-cbab-4e75-a3de-a0c2869d5897' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-285d5b70-cbab-4e75-a3de-a0c2869d5897' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
+      dtype=&#x27;float64&#x27;, name=&#x27;northing&#x27;))</pre></div></li></ul></div></li><li class='xr-section-item'><input id='section-c620b42f-5bd9-4a9c-b016-0985c600ad8d' class='xr-section-summary-in' type='checkbox' disabled ><label for='section-c620b42f-5bd9-4a9c-b016-0985c600ad8d' class='xr-section-summary'  title='Expand/collapse section'>Attributes: <span>(0)</span></label><div class='xr-section-inline-details'></div><div class='xr-section-details'><dl class='xr-attrs'></dl></div></li></ul></div></div></div></div>
 </div>
 <p>Exporting this as a netCDF:</p>
 <div class="cell docutils container">
@@ -1639,7 +1639,7 @@ By Thomas Martin
   
   <div class="footer-item">
     <p class="last-updated">
-  Last updated on 14 May 2024.
+  Last updated on 15 May 2024.
   <br/>
 </p>
   </div>
@@ -1693,7 +1693,7 @@ By Thomas Martin
         
           By Thomas Martin.
         
-          Last updated on 14 May 2024.
+          Last updated on 15 May 2024.
         </p>
       </div>
     </div>
